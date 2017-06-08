@@ -17,7 +17,7 @@ class CreatePatientTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->date('birthday');
-            $table->address('address');
+            $table->string('address');
             $table->string('email')->unique();
             $table->string('password')->unique();
 
