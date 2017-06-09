@@ -15,8 +15,9 @@ class CreateTimelineTable extends Migration
     {
         Schema::create('timelines', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('patient_id');
+            $table->integer('patient_id');
             $table->boolean('archive');
+            $table->timestamps();
         });
     }
 

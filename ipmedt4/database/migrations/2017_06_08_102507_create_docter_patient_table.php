@@ -14,8 +14,8 @@ class CreateDocterPatientTable extends Migration
     public function up()
     {
         Schema::create('docters_patients', function (Blueprint $table) {
-            $table->increments('docter_id');
-            $table->increments('patient_id');
+            $table->integer('docter_id');
+            $table->integer('patient_id');
         });
     }
 

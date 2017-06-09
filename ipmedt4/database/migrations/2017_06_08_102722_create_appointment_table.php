@@ -15,10 +15,13 @@ class CreateAppointmentTable extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
-            $table->varchar('title');
+            $table->string('title');
             $table->date('date');
-            $table->varchar('location');
-            $table->varchar('description');
+            $table->string('location');
+            $table->text('description');
+            $table->integer('patient_id');
+            $table->integer('docter_id');
+            $table->timestamps();
         });
     }
 

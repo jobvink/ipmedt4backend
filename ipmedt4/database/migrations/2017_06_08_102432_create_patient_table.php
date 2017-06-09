@@ -19,8 +19,7 @@ class CreatePatientTable extends Migration
             $table->date('birthday');
             $table->string('address');
             $table->string('email')->unique();
-            $table->string('password')->unique();
-
+            $table->string('password');
 
 
         });

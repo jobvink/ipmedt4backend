@@ -14,8 +14,8 @@ class CreateAppointmentTimelineTable extends Migration
     public function up()
     {
         Schema::create('appointments_timelines', function (Blueprint $table) {
-            $table->increments('timeline_id');
-            $table->increments('appointment_id');
+            $table->integer('timeline_id');
+            $table->integer('appointment_id');
         });
     }
 

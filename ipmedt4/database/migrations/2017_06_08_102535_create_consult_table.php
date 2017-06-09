@@ -15,11 +15,14 @@ class CreateConsultTable extends Migration
     {
         Schema::create('consults', function (Blueprint $table) {
             $table->increments('id');
-            $table->varchar('consultant');
-            $table->varchar('type');
+            $table->string('consultant');
+            $table->string('type');
             $table->date('date');
-            $table->varchar('description');
-            $table->img('appendix');
+            $table->text('description');
+            $table->string('appendix')->nullable();
+            $table->integer('patient_id');
+            $table->integer('dokter_id');
+            $table->timestamps();
         });
     }
 
