@@ -12,18 +12,6 @@ class DocterSeeder extends Seeder
     public function run()
     {
         //
-        $faker = Faker\Factory::create();
-
-        $limit = 100;
-
-
-        for($i=0; $i<$limit; $i++) {
-            DB::table('docters')->insert([
-                'name' => $faker->name,
-                'email' => $faker->unique()->email,
-                'password' => $faker->password,
-                'function' => $faker->word
-            ]);
-        }
+        factory(App\Docter::class, 100)->create();
     }
 }
