@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => '/docter/{docter}'], function (){
-    Route::get('/', 'DocterController@dashboard');
-    Route::get('/dashboard', 'DocterController@dashboard');
+    Route::get('/', 'DocterController@show');
+    Route::get('/dashboard', 'DocterController@show');
     Route::group(['prefix' => '/patients/{patient}'], function() {
-        Route::get('/', 'PatientController@show');
+        Route::get('/', 'PatientController@detail');
         Route::group(['prefix' => '/appointments'], function() {
             Route::get('/create', 'AppointmentControler@create');
             Route::post('/','AppointmentController@store');

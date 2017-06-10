@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Docter;
 use App\Patient;
 use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
+    public function detail(Docter $docter) {
+        return view('patient.detail', $docter);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -47,6 +52,7 @@ class PatientController extends Controller
     public function show(Patient $patient)
     {
         //
+        return view('patient.show', compact($patient));
     }
 
     /**

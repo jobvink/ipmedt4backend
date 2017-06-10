@@ -47,6 +47,7 @@ class DocterController extends Controller
     public function show(Docter $docter)
     {
         //
+        return view('docter.show', compact('docter'));
     }
 
     /**
