@@ -3,19 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Consult;
+use App\Docter;
 use Illuminate\Http\Request;
 
 class ConsultController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -25,6 +17,7 @@ class ConsultController extends Controller
     public function create()
     {
         //
+        return view('consult.create');
     }
 
     /**
@@ -36,17 +29,16 @@ class ConsultController extends Controller
     public function store(Request $request)
     {
         //
-    }
+        Consult::create([
+        'consultant' => request('consultant'),
+        'type' => request('type'),
+        'date' => request('date'),
+        'description' => request('description'),
+        'patient_id' => request('patient_id'),
+        'docter_id' => request('docter_id'),
+        ]);
+        return redirect('/docter/' . $request->docter_id . '/');
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Consult  $consult
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Consult $consult)
-    {
-        //
     }
 
     /**
@@ -58,6 +50,7 @@ class ConsultController extends Controller
     public function edit(Consult $consult)
     {
         //
+        return view('consult.edit', compact('consult'));
     }
 
     /**
@@ -70,6 +63,12 @@ class ConsultController extends Controller
     public function update(Request $request, Consult $consult)
     {
         //
+        $consult->consultant = $request->consultant;
+        $consult->type = $request->type;
+        $consult->date = $request->date;
+        $consult->description = $request->description;
+        $consult->save();
+        return redirect('/docter/' . $request->docter_id . '/');
     }
 
     /**
@@ -78,8 +77,10 @@ class ConsultController extends Controller
      * @param  \App\Consult  $consult
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Consult $consult)
+    public function destroy(Consult $consult, Docter $docter)
     {
         //
+        Consult::destroy($consult->id);
+        return redirect('/docter/' . $docter->id . '/');
     }
 }

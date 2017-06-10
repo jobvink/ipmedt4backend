@@ -3,19 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Appointment;
+use App\Docter;
 use Illuminate\Http\Request;
 
 class AppointmentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -25,6 +17,7 @@ class AppointmentController extends Controller
     public function create()
     {
         //
+        return view('appointment.create');
     }
 
     /**
@@ -36,17 +29,15 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Appointment $appointment)
-    {
-        //
+        Appointment::create([
+            'title' => $request->title,
+            'date' => $request->date,
+            'location' => $request->locatoin,
+            'description' => $request->description,
+            'patient_id' => $request->patient_id,
+            'docter_id' => $request->docter_id
+        ]);
+        return redirect('/docter/' . $request->docter_id . '/');
     }
 
     /**
@@ -58,6 +49,7 @@ class AppointmentController extends Controller
     public function edit(Appointment $appointment)
     {
         //
+        return view('appointment.edit', compact('appointment'));
     }
 
     /**
@@ -70,6 +62,12 @@ class AppointmentController extends Controller
     public function update(Request $request, Appointment $appointment)
     {
         //
+        $appointment->title = request('title');
+        $appointment->date = request('date');
+        $appointment->location = request('locatoin');
+        $appointment->description = request('description');
+        $appointment->save();
+        return redirect('/docter/' . $request->docter_id . '/');
     }
 
     /**
@@ -78,8 +76,10 @@ class AppointmentController extends Controller
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Appointment $appointment)
+    public function destroy(Appointment $appointment, Docter $docter)
     {
         //
+        Appointment::destroy($appointment->id);
+        return redirect('/docter/' . $docter->id . '/');
     }
 }
