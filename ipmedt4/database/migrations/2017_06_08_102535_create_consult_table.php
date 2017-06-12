@@ -21,7 +21,7 @@ class CreateConsultTable extends Migration
             $table->text('description');
             $table->string('appendix')->nullable();
             $table->integer('patient_id');
-            $table->integer('dokter_id');
+            $table->integer('docter_id');
             $table->timestamps();
         });
     }

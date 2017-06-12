@@ -9,7 +9,7 @@
     <title>Homescherm</title>
 
     <!--main css custom style-->
-    <link href="{{asset('/css/main.css" rel="stylesheet')}}">
+    <link href="{{asset('/css/main.css')}}" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">

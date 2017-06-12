@@ -23,7 +23,7 @@ Route::group(['prefix' => '/docter/{docter}'], function (){
         Route::get('/', 'PatientController@detail');
 
         Route::group(['prefix' => '/appointments'], function() {
-            Route::get('/create', 'AppointmentControler@create');
+            Route::get('/create', 'AppointmentController@create');
             Route::post('/','AppointmentController@store');
             Route::get('/{appointment}/edit', 'AppointmentController@edit');
             Route::patch('/{appointment}', 'AppointmentController@update');

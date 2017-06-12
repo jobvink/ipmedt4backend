@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
-    public function detail(Docter $docter) {
-        return view('patient.detail', $docter);
+    public function detail(Docter $docter, Patient $patient) {
+        $consults = $patient->consults;
+        return view('patient.detail', compact('docter', 'patient', 'consults'));
     }
 
     /**

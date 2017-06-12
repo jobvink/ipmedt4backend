@@ -14,33 +14,31 @@
                 <img src="{{asset('/img/placeholder.png')}}" alt="user profile" class="img-thumbnail">
             </div>
             <div class="col-lg-9">
-                <h1>Naam van de patient</h1>
+                <h1>{{$patient->name}}</h1>
                 <hr style="border: solid 1px lightgray; ">
                 <table class="table">
                     <tbody>
                     <tr>
                         <th>Naam:</th>
-                        <td>Test Persoon</td>
+                        <td>{{$patient->name}}</td>
                     </tr>
                     <tr>
                         <th>Geboorte Datum:</th>
-                        <td>8 oktober 1997</td>
+                        <td>{{$patient->birthday}}</td>
                     </tr>
                     <tr>
                         <th>Adres:</th>
-                        <td>Zernikedreef 11</td>
+                        <td>{{$patient->address}}</td>
                     </tr>
                     <tr>
                         <th>Email:</th>
-                        <td>patient@gmail.com</td>
+                        <td>{{$patient->email}}</td>
                     </tr>
                     </tbody>
                 </table>
                 <br>
-                <a class="btn btn-success">Nieuwe afspraak</a>
-                <a class="btn btn-success">Nieuw consult</a>
-                <a class="btn btn-info">patient wijzigen</a>
-                <a class="btn btn-danger">patient verwijderen</a>
+                <a href="appointments/create" class="btn btn-success">Nieuwe afspraak</a>
+                <a href="consults/create" class="btn btn-success">Nieuw consult</a>
             </div>
         </div>
     </div>
@@ -109,7 +107,7 @@
                                     </div>
                                 </li>
                                 <li class="timeline-inverted">
-                                    <div class="timeline-badge"><i><img width="25px" height="25px" src="{{asset('assats/img/huisarts.svg')}}"/></i></div>
+                                    <div class="timeline-badge"><i><img width="25px" height="25px" src="{{asset('/img/huisarts.svg')}}"/></i></div>
                                     <!--<div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>-->
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
@@ -151,7 +149,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="timeline-badge warning"><i><img width="25px" height="25px" src="assats/img/apotheek.svg"/></i></div>
+                                    <div class="timeline-badge warning"><i><img width="25px" height="25px" src="{{asset('/img/apotheek.svg')}}"/></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">Röntgenfoto</h4>
@@ -309,7 +307,7 @@
                                     </div>
                                 </li>
                                 <li class="timeline-inverted">
-                                    <div class="timeline-badge"><i><img width="25px" height="25px" src="assats/img/huisarts.svg"/></i></div>
+                                    <div class="timeline-badge"><i><img width="25px" height="25px" src="{{asset('/img/huisarts.svg')}}"/></i></div>
                                     <!--<div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>-->
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
@@ -349,7 +347,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="timeline-badge warning"><i><img width="25px" height="25px" src="assats/img/apotheek.svg"/></i></div>
+                                    <div class="timeline-badge warning"><i><img width="25px" height="25px" src="{{asset('/img/apotheek.svg')}}"/></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">Röntgenfoto</h4>
@@ -455,27 +453,24 @@
                         <i class="fa fa-star"></i>&nbsp;Uitgevoerd onderzoek
                     </div>
                     <div class="panel-body">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h2 class="panel-title">Doktersbezoek</h2>
+                        @foreach($consults as $consult)
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h2 class="panel-title">{{$consult->type}}</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <small class="text-muted">
+                                            <i class="fa fa-clock-o"></i>&nbsp;{{$consult->date}}
+                                        </small>
+                                    </p>
+                                    <p>{{$consult->description}}</p>
+                                    <br>
+                                    <a class="btn btn-info">Wijzigen</a>
+                                    <a class="btn btn-danger">verwijder</a>
+                                </div>
                             </div>
-                            <div class="panel-body">
-                                <p>
-                                    <small class="text-muted">
-                                        <i class="fa fa-clock-o"></i> 12 mei 2017
-                                    </small>
-                                </p>
-                                <p>
-                                    Tijdens het bezoek van --naam van de patient-- is het volgende onderzoek uitgevoerd. de
-                                    patient gaf aan last te hebben van zijn been nadat hij van de trap was gevallen.
-                                    De patent kon niet staan op zijn been en het bij aanraking had hij
-                                    veel pijn. Mijn advische is om een rontgenfoto te laten maken.
-                                </p>
-                                <br>
-                                <a class="btn btn-info">Wijzigen</a>
-                                <a class="btn btn-danger">verwijder</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -486,28 +481,22 @@
 @section('footerscripts')
 
     <!-- jQuery -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="{{asset('/vendor/jquery/jquery.min.js')}}"></script>
 
     <!-- Full Google Calendar - Calendar -->
-    <script type="text/javascript" src="/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="/js/fullcalendar.js"></script>
-    <script type="text/javascript" src="/js/calendar-custom.js"></script>
-    <script type="text/javascript" src="/js/gcal.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-
-    <!-- DataTable -->
-    <script src="/js/jquery.js"></script>
-    <script src="/js/jquery.dataTables.min.js"></script>
-    <script src="/js/dataTables.bootstrap.min.js"></script>
-    <script> $('#mydata').dataTable();</script>
+    <script type="text/javascript" src="{{asset('/js/fullcalendar.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/fullcalendar.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/calendar-custom.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/gcal.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/main.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="{{asset('/vendor/metisMenu/metisMenu.min.js')}}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="/js/sb-admin-2.js"></script>
+    <script src="{{asset('/js/sb-admin-2.js')}}"></script>
 
 @endsection
