@@ -29,7 +29,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="datum">Datum voor de afspraak:</label>
+                                            <label for="date">Datum voor de afspraak:</label>
                                             <input class="form-control" type="date" id="date" name="date"/>
                                         </div>
                                         <div class="form-group">
