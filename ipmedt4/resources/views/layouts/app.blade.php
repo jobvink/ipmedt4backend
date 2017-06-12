@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 @include('includes.head')
 <body>
-    @include('includes.nav');
+    @include('includes.nav')
     <div class="container-fluid" style="background: white">
         @yield('content')
     </div>
