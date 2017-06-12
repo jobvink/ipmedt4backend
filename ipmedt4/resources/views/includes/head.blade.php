@@ -9,28 +9,28 @@
     <title>Homescherm</title>
 
     <!--main css custom style-->
-    <link href="../dist/css/main.css" rel="stylesheet">
+    <link href="{{asset('/css/main.css" rel="stylesheet')}}">
 
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{{asset('/vendor/bootstrap/css/bootstrap.css" rel="stylesheet')}}">
 
     <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="{{asset('/vendor/metisMenu/metisMenu.min.css" rel="stylesheet')}}">
 
     <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="{{asset('/css/sb-admin-2.css" rel="stylesheet')}}">
 
     <!-- Morris Charts CSS -->
-    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="{{asset('/vendor/morrisjs/morris.css" rel="stylesheet')}}">
 
     <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css')}}">
 
     <!-- Calendar CSS -->
-    <link rel="stylesheet" href="assets/fullcalendar.css">
+    <link rel="stylesheet" href="{{asset('css/fullcalendar.css')}}">
 
     <!-- DataTable CSS -->
-    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css" type="stylesheet">
+    <link rel="stylesheet" href="{{asset('/css/dataTables.bootstrap.min.css')}}" type="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
