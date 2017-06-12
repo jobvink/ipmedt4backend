@@ -466,8 +466,18 @@
                                     </p>
                                     <p>{{$consult->description}}</p>
                                     <br>
-                                    <a class="btn btn-info">Wijzigen</a>
-                                    <a class="btn btn-danger">verwijder</a>
+                                    <ul class="list-inline">
+                                        <li>
+                                        <a href="{{$consult->id}}/edit" class="btn btn-info">Wijzigen</a>
+                                        </li>
+                                        <li>
+                                            <form class="form-inline" method="POST" action="/docter/{{$docter->id}}/patients/{{$patient->id}}/consults/{{$consult->id}}">
+                                        {{method_field('DELETE')}}
+                                        {{csrf_field()}}
+                                        <button type="submit" class="btn btn-danger">verwijder</button>
+                                            </form>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         @endforeach

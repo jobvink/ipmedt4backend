@@ -12,15 +12,16 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
-                    <form method="POST">
+                    <form method="POST" action="/docter/{{$docter->id}}/patients/{{$patient->id}}/appointments">
+                        {{csrf_field()}}
                         <div class="container">
                             <div class="row">
                                 <div class="form-group">
                                     <h1 class="col-lg-offset-1">Consult van patient(variabel)</h1>
                                     <div class="col-lg-4 col-lg-offset-1">
                                         <div class="form-group">
-                                            <label for="stap_proces">Stap in het proces:</label>
-                                            <select id="stap_proces" class="form-control" name="stap_proces">
+                                            <label for="title">Stap in het proces:</label>
+                                            <select id="title" class="form-control" name="title">
                                                 <option value="Huisarts">De huisarts</option>
                                                 <option value="eerste_hulp">De eerste hulp</option>
                                                 <option value="rontgenfoto">Röntgenfoto</option>
@@ -29,11 +30,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="datum">Datum voor de afspraak:</label>
-                                            <input class="form-control" type="date" id="datum" name="datum"/>
+                                            <input class="form-control" type="date" id="date" name="date"/>
                                         </div>
                                         <div class="form-group">
-                                            <label for="locatie">Locatie:</label>
-                                            <select class="form-control" id="locatie" name="locatie">
+                                            <label for="location">Locatie:</label>
+                                            <select class="form-control" id="location" name="location">
                                                 <option value="LUMC">LUMC</option>
                                                 <option value="AMC">AMC</option>
                                                 <option value="langeland">Langeland Ziekenhuis</option>
@@ -42,9 +43,9 @@
                                     </div>
                                     <div class="col-lg-5 col-lg-offset-1">
                                         <div class="form-group">
-                                            <label for="beschrijving" class="form_tekst">Beschrijving
+                                            <label for="description" class="form_tekst">Beschrijving
                                                 (optioneel):</label>
-                                            <textarea class="form-control" id="beschrijving" name="beschrijving"
+                                            <textarea class="form-control" id="description" name="description"
                                                       rows="8" cols="50" placeholder="Beschrijf hier ..."></textarea>
                                         </div>
                                     </div>
@@ -53,6 +54,8 @@
 
                             <div class="row">
                                 <br />
+                                <input type="hidden" id="docter_id" name="docter_id" value="{{$docter->id}}">
+                                <input type="hidden" id="patient_id" name="patient_id" value="{{$patient->id}}">
                                 <input type="submit" class="col-lg-offset-1 btn btn-success">
                             </div></div>
                     </form>

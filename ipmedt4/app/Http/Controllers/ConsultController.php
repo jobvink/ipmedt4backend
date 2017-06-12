@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Consult;
 use App\Docter;
+use App\Patient;
 use Illuminate\Http\Request;
 
 class ConsultController extends Controller
@@ -14,10 +15,10 @@ class ConsultController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Docter $docter, Patient $patient)
     {
         //
-        return view('consult.create');
+        return view('consult.create', compact('docter', 'patient'));
     }
 
     /**
@@ -29,6 +30,7 @@ class ConsultController extends Controller
     public function store(Request $request)
     {
         //
+//        dd(\request('date'));
         Consult::create([
         'consultant' => request('consultant'),
         'type' => request('type'),
@@ -37,7 +39,7 @@ class ConsultController extends Controller
         'patient_id' => request('patient_id'),
         'docter_id' => request('docter_id'),
         ]);
-        return redirect('/docter/' . $request->docter_id . '/');
+        return redirect('/docter/' . $request->docter_id . '/patients/' . $request->patient_id . '/');
 
     }
 
@@ -77,10 +79,10 @@ class ConsultController extends Controller
      * @param  \App\Consult  $consult
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Consult $consult, Docter $docter)
+    public function destroy(Docter $docter, Patient $patient, Consult $consult)
     {
         //
         Consult::destroy($consult->id);
-        return redirect('/docter/' . $docter->id . '/');
+        return redirect('/docter/' . $docter->id . '/patients/' . $patient->id . '/');
     }
 }
