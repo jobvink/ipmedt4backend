@@ -20,22 +20,22 @@
                                 <tr>
                                     <th>Naam</th>
                                     <th>Email</th>
-                                    <th>Woonplaats</th>
                                     <th>Adres</th>
-                                    <th>Mobiel</th>
+                                    <th>Actie</th>
                                 </tr>
 
                                 </thead>
 
                                 <tbody>
-                                    <tr><td>Rik</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                    <tr><td>Job</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                    <tr><td>Julia</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                    <tr><td>Tim</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                    <tr><td>Jeroen</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                    <tr><td>Robbertert</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                    <tr><td>Bert</td><td>Rikwolk@gmail.com</td><td>Benthuizen</td><td>Christinastaat 77</td><td>0611708685</td></tr>
-                                </tbody>
+                                    @foreach($patients as $patient)
+                                        <tr>
+                                            <td>{{$patient->name}}</td>
+                                            <td>{{$patient->email}}</td>
+                                            <td>{{$patient->address}}</td>
+                                            <td><a href="/docter/{{$docter->id}}/patients/{{$patient->id}}/" class="btn btn-success">Details</a></td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
                             </table>
                         </div>
                         <!-- /.panel-body -->
@@ -67,32 +67,27 @@
 
 @section('footerscripts')
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
 
     <!-- Full Google Calendar - Calendar -->
-    <script type="text/javascript" src="assets/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="assets/fullcalendar.js"></script>
-    <script type="text/javascript" src="assets/calendar-custom.js"></script>
-    <script type="text/javascript" src="assets/gcal.js"></script>
-    <script type="text/javascript" src="assets/main.js"></script>
+    <script type="text/javascript" src="/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/js/fullcalendar.js"></script>
+    <script type="text/javascript" src="/js/calendar-custom.js"></script>
+    <script type="text/javascript" src="/js/gcal.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 
     <!-- DataTable -->
-    <script src="assets/jquery.js"></script>
-    <script src="assets/jquery.dataTables.min.js"></script>
-    <script src="assets/dataTables.bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.bootstrap.min.js"></script>
     <script> $('#mydata').dataTable();</script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="../vendor/raphael/raphael.min.js"></script>
-    <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
+    <script src="/vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="/js/sb-admin-2.js"></script>
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Docter;
+use App\Patient;
 use Illuminate\Http\Request;
 
 class DocterController extends Controller
@@ -47,7 +48,8 @@ class DocterController extends Controller
     public function show(Docter $docter)
     {
         //
-        return view('docter.show', compact('docter'));
+        $patients = Patient::all();
+        return view('docter.show', compact('docter', 'patients'));
     }
 
     /**
