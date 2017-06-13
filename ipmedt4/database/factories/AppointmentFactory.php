@@ -8,8 +8,9 @@
 use Carbon\Carbon;
 
 $factory->define(App\Appointment::class, function (Faker\Generator $faker) {
+    $types = ['Huisarts', 'Eerstehulp', 'Rontgenfoto', 'Gipsen'];
     return [
-       'title' => $faker->word,
+       'title' => $types[rand(0, count($types)-1)],
        'date' => Carbon::now()->addWeeks(rand(-12, 12)),
        'location' => $faker->address,
        'description' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),

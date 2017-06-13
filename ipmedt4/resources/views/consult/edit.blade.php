@@ -16,7 +16,7 @@
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="consultant">Consultant:</label>
-                            <input class="form-control" type="text" id="consultant" name="consultant">
+                            <input class="form-control" type="text" id="consultant" name="consultant" value="{{$consult->consultant}}">
                         </div>
                         <div class="form-group">
                             <label for="type">Type:</label>
@@ -41,7 +41,7 @@
                             <label for="beschrijving" class="form_tekst">Beschrijving
                                 (optioneel):</label>
                             <textarea class="form-control" id="description" name="description"
-                                      rows="8" cols="50" placeholder="Beschrijf hier ..."></textarea>
+                                      rows="8" cols="50" placeholder="Beschrijf hier ...">{{$consult->description}}</textarea>
                         </div>
                         <input type="hidden" id="docter_id" name="docter_id" value="{{$docter->id}}">
                         <input type="hidden" id="patient_id" name="patient_id" value="{{$patient->id}}">

@@ -10,7 +10,8 @@ class PatientController extends Controller
 {
     public function detail(Docter $docter, Patient $patient) {
         $consults = $patient->consults;
-        return view('patient.detail', compact('docter', 'patient', 'consults'));
+        $appointments = $patient->appointments;
+        return view('patient.detail', compact('docter', 'patient', 'consults', 'appointments'));
     }
 
     /**
@@ -53,7 +54,9 @@ class PatientController extends Controller
     public function show(Patient $patient)
     {
         //
-        return view('patient.show', compact($patient));
+        $appointments = $patient->appointments;
+        $consults = $patient->consults;
+        return view('patient.show', compact('patient', 'appointments', 'consults'));
     }
 
     /**

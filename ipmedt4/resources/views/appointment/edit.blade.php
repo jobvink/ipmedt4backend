@@ -46,7 +46,7 @@
                                             <label for="description" class="form_tekst">Beschrijving
                                                 (optioneel):</label>
                                             <textarea class="form-control" id="description" name="description"
-                                                      rows="8" cols="50" placeholder="Beschrijf hier ..."></textarea>
+                                                      rows="8" cols="50">{{$appointment->description}}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                 <br />
                                 <input type="hidden" id="docter_id" name="docter_id" value="{{$docter->id}}">
                                 <input type="hidden" id="patient_id" name="patient_id" value="{{$patient->id}}">
-                                <input type="submit" class="col-lg-offset-1 btn btn-success">
+                                <button type="submit" class="btn btn-success" >Wijzig</button>
                             </div></div>
                     </form>
                 </div>

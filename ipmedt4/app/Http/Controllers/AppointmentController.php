@@ -47,10 +47,10 @@ class AppointmentController extends Controller
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Appointment $appointment)
+    public function edit(Docter $docter, Patient $patient, Appointment $appointment)
     {
         //
-        return view('appointment.edit', compact('appointment'));
+        return view('appointment.edit', compact('docter', 'patient','appointment'));
     }
 
     /**
@@ -77,10 +77,10 @@ class AppointmentController extends Controller
      * @param  \App\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Appointment $appointment, Docter $docter)
+    public function destroy(Docter $docter, Patient $patient, Appointment $appointment)
     {
         //
         Appointment::destroy($appointment->id);
-        return redirect('/docter/' . $docter->id . '/');
+        return redirect('/docter/' . $docter->id . '/patients/' . $patient->id . '/');
     }
 }

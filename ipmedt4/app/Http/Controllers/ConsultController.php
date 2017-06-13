@@ -30,11 +30,11 @@ class ConsultController extends Controller
     public function store(Request $request)
     {
         //
-//        dd(\request('date'));
+//        dd(\request('appointment_id'));
         Consult::create([
         'consultant' => request('consultant'),
         'type' => request('type'),
-        'date' => request('date'),
+        'appointment_id' => request('appointment_id'),
         'description' => request('description'),
         'patient_id' => request('patient_id'),
         'docter_id' => request('docter_id'),
@@ -49,10 +49,10 @@ class ConsultController extends Controller
      * @param  \App\Consult  $consult
      * @return \Illuminate\Http\Response
      */
-    public function edit(Consult $consult)
+    public function edit(Docter $docter, Patient $patient, Consult $consult)
     {
         //
-        return view('consult.edit', compact('consult'));
+        return view('consult.edit', compact('docter', 'patient', 'consult'));
     }
 
     /**
@@ -67,7 +67,7 @@ class ConsultController extends Controller
         //
         $consult->consultant = $request->consultant;
         $consult->type = $request->type;
-        $consult->date = $request->date;
+        $consult->appointment_id = $request->appointment_id;
         $consult->description = $request->description;
         $consult->save();
         return redirect('/docter/' . $request->docter_id . '/');

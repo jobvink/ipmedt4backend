@@ -18,7 +18,7 @@ class CreateAppointmentTable extends Migration
             $table->string('title');
             $table->date('date');
             $table->string('location');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('patient_id');
             $table->integer('docter_id');
             $table->timestamps();

@@ -17,9 +17,8 @@ class CreateConsultTable extends Migration
             $table->increments('id');
             $table->string('consultant');
             $table->string('type');
-            $table->date('date');
-            $table->text('description');
-            $table->string('appendix')->nullable();
+            $table->integer('appointment_id');
+            $table->text('description')->nullable();
             $table->integer('patient_id');
             $table->integer('docter_id');
             $table->timestamps();

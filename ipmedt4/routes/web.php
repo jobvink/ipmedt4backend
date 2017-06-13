@@ -23,17 +23,17 @@ Route::group(['prefix' => '/docter/{docter}'], function (){
         Route::get('/', 'PatientController@detail');
 
         Route::group(['prefix' => '/appointments'], function() {
+            Route::get('/{appointment}/edit', 'AppointmentController@edit');
             Route::get('/create', 'AppointmentController@create');
             Route::post('/','AppointmentController@store');
-            Route::get('/{appointment}/edit', 'AppointmentController@edit');
             Route::patch('/{appointment}', 'AppointmentController@update');
-            Route::delete('/{appointment}', 'AppointmetnController@destroy');
+            Route::delete('/{appointment}', 'AppointmentController@destroy');
         });
 
         Route::group(['prefix' => '/consults'], function(){
+            Route::get('/{consult}/edit', 'ConsultController@edit');
             Route::get('/create', 'ConsultController@create');
             Route::post('/', 'ConsultController@store');
-            Route::get('/{consult}/edit', 'ConsultController@edit');
             Route::patch('/{consult}', 'ConsultController@update');
             Route::delete('{consult}', 'ConsultController@destroy');
         });
@@ -41,7 +41,7 @@ Route::group(['prefix' => '/docter/{docter}'], function (){
 });
 
 Route::group(['prefix' => '/patient/{patient}'], function(){
-    Route::get('/', 'PatientControllter@show');
+    Route::get('/', 'PatientController@show');
     Route::get('/dashboard', 'PatientController@show');
 });
 
