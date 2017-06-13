@@ -7,7 +7,7 @@
                 <ul class="timeline hometimeline">
 
                     <li class="begin_tijdlijn">
-                        <div class="timeline-badge begin_timeline"><i><img class="Begin_icon" width="25px" height="25px" src="../../../img/broken-bone.png"/></i></div>
+                        <div class="timeline-badge begin_timeline"><i><img class="Begin_icon" width="50px" height="50px" src="../../../img/broken-bone.png"/></i></div>
                     </li>
 
 
@@ -203,7 +203,7 @@
 
                     <!-- Einde tijdlijn -->
                     <li class="einde_tijdlijn">
-                        <div class="timeline-badge begin_timeline"><i><img class="Begin_icon" width="25px" height="25px" src="../../../img/broken-bone.png"/></i></div>
+                        <div class="timeline-badge einde_timeline"><i><img class="Begin_icon" width="50px" height="50px" src="../../../img/broken-bone.png"/></i></div>
                     </li>
 
                 </ul>
