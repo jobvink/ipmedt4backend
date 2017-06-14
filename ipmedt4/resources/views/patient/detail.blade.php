@@ -10,10 +10,10 @@
     <!-- /.row -->
     <div class="jumbotron">
         <div class="container">
-            <div class="col-lg-3">
+            <div class="col-sm-12 col-md-4 col-lg-3 col-xs-12">
                 <img src="{{asset('/img/placeholder.png')}}" alt="user profile" class="img-thumbnail">
             </div>
-            <div class="col-lg-9">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-">
                 <h1>{{$patient->name}}</h1>
                 <hr style="border: solid 1px lightgray; ">
                 <table class="table">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-6 no-padding">
+        <div class="col-lg-8 col-lg-offset-2 no-padding">
             <div class="col-lg-12">
                 <div class="panel panel-info">
                     <div class="panel-heading">
@@ -56,7 +56,7 @@
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse1" class="panel-collapse collapse">
+                    <div id="collapse1" class="panel-collapse">
                         <div class="panel-body">
                             <ul class="timeline">
                                 <li>
