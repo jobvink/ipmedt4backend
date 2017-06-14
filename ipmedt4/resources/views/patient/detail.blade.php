@@ -44,7 +44,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-6 no-padding">
+        <div class="col-lg-6 no-padding col-lg-offset-3">
             <div class="col-lg-12">
                 <div class="panel panel-info">
                     <div class="panel-heading">
