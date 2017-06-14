@@ -48,6 +48,7 @@ body {
   display: flex;
   align-content: center;
   align-items: center;
+  text-align: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
@@ -60,6 +61,7 @@ body {
 
 .copyright 
 {
+    text-align: center;
   font-size: 12px;
   color: white;
   line-height: 4px;
@@ -119,9 +121,4 @@ body {
 .Begin_icon{
   text-align: center;
   margin-top: 25px;
-}
-
-.copyright
-{
-    text-align: center;
 }
