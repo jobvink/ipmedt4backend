@@ -48,12 +48,9 @@ body {
   display: flex;
   align-content: center;
   align-items: center;
-  position: absolute;
   justify-content: center;
   flex-direction: column;
-  bottom: 0;
   width: 100%;
-  left: 0;
   height: 100px;
 }
 

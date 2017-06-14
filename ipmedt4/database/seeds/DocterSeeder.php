@@ -12,6 +12,16 @@ class DocterSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('docters')->insert([
+            [
+                'id' => 1,
+                'name' => 'Dr. Robbert Winkel',
+                'email' => 'robertwinkel@test.nl',
+                'password' => bcrypt('ipmedt4'),
+                'function' => 'Dokter',
+            ]
+        ]);
+
         factory(App\Docter::class, 100)->create();
     }
 }
