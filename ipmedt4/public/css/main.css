@@ -1,6 +1,5 @@
 body {
   background-color: white !important;
-  
 }
 
 .navbar-right {
@@ -123,11 +122,6 @@ body {
 .Begin_icon{
   text-align: center;
   margin-top: 25px;
-}
-
-#footer
-{
-    text-align: center;
 }
 
 .copyright
