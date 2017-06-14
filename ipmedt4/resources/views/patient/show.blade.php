@@ -2,7 +2,7 @@
 @section('content')
 
     <div style="padding-top: 5%" class="row">
-        <div class="col-lg-6 no-padding">
+        <div class="col-lg-8 no-padding col-lg-offset-2">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
