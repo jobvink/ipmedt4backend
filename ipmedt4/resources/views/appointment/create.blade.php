@@ -1,11 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="row">
-        <a class="btn btn-default"><i class="fa fa-caret-left"></i>&nbsp;Terug</a>
-    </div>
-    <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Afspraak</h1>
+            <a class="btn btn-danger" style="margin-top: 1rem"><i class="fa fa-caret-left"></i>&nbsp;Terug</a>
+            <h1 class="page-header" style="margin-top: 10px">Afspraak</h1>
         </div>
         <!-- /.col-lg-12 -->
         <div class="col-lg-12">
