@@ -32,10 +32,10 @@ class ConsultController extends Controller
         //
         $this->validate(request(),
             [
-            'consultant' => 'required',
-            'type' => 'required',
-            'description' => 'required',
-            'appointment_id' => 'required|numeric'
+                'consultant' => 'required',
+                'type' => 'required',
+                'description' => 'required',
+                'appointment_id' => 'required|numeric'
             ],
             [
                 'consultant.required' => 'Er moet een consultant aan de consult toegevoegd worden',
@@ -81,10 +81,10 @@ class ConsultController extends Controller
         //
         $this->validate(request(),
             [
-            'consultant' => 'required',
-            'type' => 'required',
-            'description' => 'required',
-            'appointment_id' => 'required|numeric'
+                'consultant' => 'required',
+                'type' => 'required',
+                'description' => 'required',
+                'appointment_id' => 'required|numeric'
             ],
             [
                 'consultant.required' => 'Er moet een consultant aan de consult toegevoegd worden',

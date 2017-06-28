@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="row">
+        <a class="btn btn-default"><i class="fa fa-caret-left"></i>&nbsp;Terug</a>
+    </div>
+    <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Afspraak</h1>
         </div>
@@ -17,7 +20,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="form-group">
-                                    <h1 class="col-lg-offset-1">Consult van patient{{$patient->name}})</h1>
+                                    <h1 class="col-lg-offset-1">Consult van patient{{$patient->name}}</h1>
                                     <div class="col-lg-4 col-lg-offset-1">
                                         <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                                             <label for="title">Stap in het proces:</label>
