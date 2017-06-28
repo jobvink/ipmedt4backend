@@ -17,7 +17,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="form-group">
-                                    <h1 class="col-lg-offset-1">Consult van patient(variabel)</h1>
+                                    <h1 class="col-lg-offset-1">Consult van patient{{$patient->name}})</h1>
                                     <div class="col-lg-4 col-lg-offset-1">
                                         <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                                             <label for="title">Stap in het proces:</label>
@@ -79,7 +79,6 @@
                                 <input type="submit" class="col-lg-offset-1 btn btn-success">
                             </div></div>
                     </form>
-                    @include('includes/errors')
                 </div>
                 <!-- /.panel-body -->
             </div>

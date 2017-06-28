@@ -34,6 +34,7 @@ class ConsultController extends Controller
             'consultant' => 'required',
             'type' => 'required',
             'description' => 'required',
+            'appointment_id' => 'required|numeric'
         ]);
 
         Consult::create([
@@ -74,6 +75,7 @@ class ConsultController extends Controller
             'consultant' => 'required',
             'type' => 'required',
             'description' => 'required',
+            'appointment_id' => 'required|numeric'
         ]);
 
         $consult->consultant = $request->consultant;
