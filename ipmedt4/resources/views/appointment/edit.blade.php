@@ -59,6 +59,7 @@
                                 <button type="submit" class="btn btn-success" >Wijzig</button>
                             </div></div>
                     </form>
+                    @include('includes/errors')
                 </div>
                 <!-- /.panel-body -->
             </div>

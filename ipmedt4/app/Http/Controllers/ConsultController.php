@@ -30,14 +30,19 @@ class ConsultController extends Controller
     public function store(Request $request)
     {
         //
-//        dd(\request('appointment_id'));
+        $this->validate(request(), [
+            'consultant' => 'required',
+            'type' => 'required',
+            'description' => 'required',
+        ]);
+
         Consult::create([
-        'consultant' => request('consultant'),
-        'type' => request('type'),
-        'appointment_id' => request('appointment_id'),
-        'description' => request('description'),
-        'patient_id' => request('patient_id'),
-        'docter_id' => request('docter_id'),
+            'consultant' => request('consultant'),
+            'type' => request('type'),
+            'appointment_id' => request('appointment_id'),
+            'description' => request('description'),
+            'patient_id' => request('patient_id'),
+            'docter_id' => request('docter_id'),
         ]);
         return redirect('/docter/' . $request->docter_id . '/patients/' . $request->patient_id . '/');
 
@@ -65,6 +70,12 @@ class ConsultController extends Controller
     public function update(Request $request, Consult $consult)
     {
         //
+        $this->validate(request(), [
+            'consultant' => 'required',
+            'type' => 'required',
+            'description' => 'required',
+        ]);
+
         $consult->consultant = $request->consultant;
         $consult->type = $request->type;
         $consult->appointment_id = $request->appointment_id;

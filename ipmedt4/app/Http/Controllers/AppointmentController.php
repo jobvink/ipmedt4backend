@@ -30,6 +30,13 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate(request(), [
+            'title' => 'required',
+            'date' => 'required|date',
+            'location' => 'required',
+            'description' => 'required'
+        ]);
+
         Appointment::create([
             'title' => $request->title,
             'date' => $request->date,
@@ -63,6 +70,13 @@ class AppointmentController extends Controller
     public function update(Request $request, Appointment $appointment)
     {
         //
+        $this->validate(request(), [
+            'title' => 'required',
+            'date' => 'required|date',
+            'location' => 'required',
+            'description' => 'required'
+        ]);
+
         $appointment->title = request('title');
         $appointment->date = request('date');
         $appointment->location = request('locatoin');

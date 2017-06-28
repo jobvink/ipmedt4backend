@@ -59,6 +59,7 @@
                                 <input type="submit" class="col-lg-offset-1 btn btn-success">
                             </div></div>
                     </form>
+                    @include('includes/errors')
                 </div>
                 <!-- /.panel-body -->
             </div>

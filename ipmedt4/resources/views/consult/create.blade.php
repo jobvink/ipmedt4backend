@@ -48,6 +48,7 @@
                         <br/>
                         <input class="btn btn-success" type="submit">
                     </form>
+                    @include('includes/errors')
                 </div>
                 <!-- /.panel-body -->
             </div>
