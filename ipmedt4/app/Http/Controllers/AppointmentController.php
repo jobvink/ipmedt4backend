@@ -30,12 +30,20 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate(request(), [
+        $this->validate(request(),
+            [
             'title' => 'required',
             'date' => 'required|date',
             'location' => 'required',
             'description' => 'required'
-        ]);
+            ],
+            [
+                'title.required' => 'Er moet een title toegevoegd worden',
+                'date.required' => 'Er moet een datum toegevoegd worden',
+                'date.date' => 'Datum moet een datum zijn',
+                'location.required' => 'Er moet een locatie toegevoegd worden',
+                'description.required' => 'Er moet een beschrijving ingevuld worden',
+            ]);
 
         Appointment::create([
             'title' => $request->title,
@@ -70,12 +78,20 @@ class AppointmentController extends Controller
     public function update(Request $request, Appointment $appointment)
     {
         //
-        $this->validate(request(), [
+        $this->validate(request(),
+            [
             'title' => 'required',
             'date' => 'required|date',
             'location' => 'required',
             'description' => 'required'
-        ]);
+            ],
+            [
+                'title.required' => 'Er moet een title toegevoegd worden',
+                'date.required' => 'Er moet een datum toegevoegd worden',
+                'date.date' => 'Datum moet een datum zijn',
+                'location.required' => 'Er moet een locatie toegevoegd worden',
+                'description.required' => 'Er moet een beschrijving ingevuld worden',
+            ]);
 
         $appointment->title = request('title');
         $appointment->date = request('date');

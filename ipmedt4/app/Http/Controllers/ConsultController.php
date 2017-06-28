@@ -30,12 +30,20 @@ class ConsultController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate(request(), [
+        $this->validate(request(),
+            [
             'consultant' => 'required',
             'type' => 'required',
             'description' => 'required',
             'appointment_id' => 'required|numeric'
-        ]);
+            ],
+            [
+                'consultant.required' => 'Er moet een consultant aan de consult toegevoegd worden',
+                'type.required' => 'Er moet een type afspraak ingevuld worden',
+                'description.required' => 'Er moet een beschrijving ingevuld worden',
+                'appointment_id.required' => 'De consult moet een een afspraak gecopeld worden'
+            ]
+        );
 
         Consult::create([
             'consultant' => request('consultant'),
@@ -71,12 +79,20 @@ class ConsultController extends Controller
     public function update(Request $request, Consult $consult)
     {
         //
-        $this->validate(request(), [
+        $this->validate(request(),
+            [
             'consultant' => 'required',
             'type' => 'required',
             'description' => 'required',
             'appointment_id' => 'required|numeric'
-        ]);
+            ],
+            [
+                'consultant.required' => 'Er moet een consultant aan de consult toegevoegd worden',
+                'type.required' => 'Er moet een type afspraak ingevuld worden',
+                'description.required' => 'Er moet een beschrijving ingevuld worden',
+                'appointment_id.required' => 'De consult moet een een afspraak gecopeld worden'
+            ]
+        );
 
         $consult->consultant = $request->consultant;
         $consult->type = $request->type;
@@ -98,4 +114,5 @@ class ConsultController extends Controller
         Consult::destroy($consult->id);
         return redirect('/docter/' . $docter->id . '/patients/' . $patient->id . '/');
     }
+
 }
