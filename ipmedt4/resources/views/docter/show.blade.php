@@ -43,21 +43,6 @@
                 </div>
 
             </div>
-            <div class="col-lg-10 col-lg-offset-1">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-calendar"></i> Agenda
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div id="calendar"></div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                </div>
-
-            </div>
         </div>
         <!-- /.row -->
     </div>
