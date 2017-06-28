@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="936dca84-aff8-4605-b680-f1da4411bf01" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ipmedt4/.env.example" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ipmedt4backend.iml" afterPath="$PROJECT_DIR$/.idea/ipmedt4backend.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ipmedt4/public/vendor/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/ipmedt4/public/vendor/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ipmedt4/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/ipmedt4/resources/views/welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ipmedt4/public/css/main.css" afterPath="$PROJECT_DIR$/ipmedt4/public/css/main.css" />
     </list>
     <ignored path="ipmedt4backend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ipmedt4/public/vendor/bootstrap/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -75,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ipmedt4/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="308">
+              <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -89,6 +85,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>navbar-de</find>
       <find>timeline</find>
     </findStrings>
   </component>
@@ -120,9 +117,9 @@
         <option value="$PROJECT_DIR$/ipmedt4/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/ipmedt4/resources/views/includes/nav.blade.php" />
         <option value="$PROJECT_DIR$/ipmedt4/.gitignore" />
-        <option value="$PROJECT_DIR$/ipmedt4/public/css/main.css" />
         <option value="$PROJECT_DIR$/ipmedt4/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/ipmedt4/public/vendor/bootstrap/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/ipmedt4/public/css/main.css" />
       </list>
     </option>
   </component>
@@ -375,12 +372,12 @@
       <workItem from="1497424858631" duration="336000" />
       <workItem from="1497425195571" duration="49000" />
       <workItem from="1497425254047" duration="915000" />
-      <workItem from="1498634263084" duration="1559000" />
+      <workItem from="1498634263084" duration="1749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23299000" />
+    <option name="totallyTimeSpent" value="23489000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,22 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ipmedt4/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ipmedt4/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ipmedt4/public/css/sb-admin-2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66">
@@ -730,6 +711,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="4497" column="24" lean-forward="true" selection-start-line="4497" selection-start-column="24" selection-end-line="4497" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipmedt4/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipmedt4/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
           <folding />
         </state>
       </provider>
