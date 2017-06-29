@@ -2,7 +2,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Patient</h1>
+            <a href="/docter/{{$docter->id}}/" class="btn btn-danger" style="margin-top: 1rem"><i class="fa fa-caret-left"></i>&nbsp;Terug</a>
+            <h1 class="page-header" style="margin-top: 10px">Patient</h1>
         </div>
         <!-- /.col-lg-12 -->
 

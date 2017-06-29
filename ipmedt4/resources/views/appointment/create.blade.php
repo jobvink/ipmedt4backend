@@ -2,7 +2,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Afspraak</h1>
+            <a href="/docter/{{$docter->id}}/patients/{{$patient->id}}/" class="btn btn-danger" style="margin-top: 1rem"><i class="fa fa-caret-left"></i>&nbsp;Terug</a>
+            <h1 class="page-header" style="margin-top: 10px">Afspraak</h1>
         </div>
         <!-- /.col-lg-12 -->
         <div class="col-lg-12">
@@ -17,9 +18,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="form-group">
-                                    <h1 class="col-lg-offset-1">Consult van patient(variabel)</h1>
+                                    <h1 class="col-lg-offset-1">Consult van patient{{$patient->name}}</h1>
                                     <div class="col-lg-4 col-lg-offset-1">
-                                        <div class="form-group">
+                                        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                                             <label for="title">Stap in het proces:</label>
                                             <select id="title" class="form-control" name="title">
                                                 <option value="Huisarts">De huisarts</option>
@@ -27,26 +28,46 @@
                                                 <option value="Rontgenfoto">Röntgenfoto</option>
                                                 <option value="Gipsen">Gipsen</option>
                                             </select>
+                                            @if ($errors->has('title'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('title') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
                                             <label for="date">Datum voor de afspraak:</label>
                                             <input class="form-control" type="date" id="date" name="date"/>
+                                            @if ($errors->has('date'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('date') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
                                             <label for="location">Locatie:</label>
                                             <select class="form-control" id="location" name="location">
                                                 <option value="LUMC">LUMC</option>
                                                 <option value="AMC">AMC</option>
                                                 <option value="langeland">Langeland Ziekenhuis</option>
                                             </select>
+                                            @if ($errors->has('location'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('location') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-lg-5 col-lg-offset-1">
-                                        <div class="form-group">
+                                        <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
                                             <label for="description" class="form_tekst">Beschrijving
                                                 (optioneel):</label>
                                             <textarea class="form-control" id="description" name="description"
                                                       rows="8" cols="50" placeholder="Beschrijf hier ..."></textarea>
+                                            @if ($errors->has('date'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('date') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
