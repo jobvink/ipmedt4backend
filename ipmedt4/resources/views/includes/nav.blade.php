@@ -16,14 +16,12 @@
                 @if(Auth::guest())
                     <li><a style="padding-right: 50px" href="{{ route('login') }}">Login</a></li>
                 @else
-                    <li>
+                    <li style="display: flex">
                         <a style="padding-right: 50px">
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                            {{ Auth::user()->name }}
                         </a>
-                    </li>
-                    <li>
                         <a style="padding-right: 50px" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
+                               onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             Logout
                         </a>
