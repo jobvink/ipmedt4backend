@@ -5,7 +5,7 @@
         <!--paginainfo-->
         <div class="row info">
             <div class="col-lg-4 col-lg-offset-4">
-                <img src="../../../img/life-technology-logo.png" class="img-responsive logo" alt="Life logo" height="auto" width="200">
+                <img src="../../../img/life-technology-logo.png" class="img-responsive logo" alt="Life logo" height="auto" width="275">
             </div>
         </div>
         <div class="row info">
