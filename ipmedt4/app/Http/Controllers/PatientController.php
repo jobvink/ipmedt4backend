@@ -56,7 +56,9 @@ class PatientController extends Controller
         //
         $appointments = $patient->appointments;
         $consults = $patient->consults;
-        return view('patient.show', compact('patient', 'appointments', 'consults'));
+        $marker = true;
+
+        return view('patient.show', compact('patient', 'appointments', 'consults', 'marker'));
     }
 
     /**

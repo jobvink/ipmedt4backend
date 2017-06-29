@@ -18,7 +18,7 @@ class Patient extends Model
     }
 
     public function appointments() {
-        return $this->hasMany(Appointment::class);
+        return $this->hasMany(Appointment::class)->sorted();
     }
 
     public function dockters() {

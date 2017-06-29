@@ -20,4 +20,8 @@ class Appointment extends Model
     public function consult() {
         return $this->hasOne(Consult::class);
     }
+
+    public function scopeSorted($query){
+        return $query->orderBy('date', 'asc');
+    }
 }

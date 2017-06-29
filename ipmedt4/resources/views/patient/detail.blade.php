@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
     <div class="row">
         <div class="col-lg-12">
             <a href="/docter/{{$docter->id}}/" class="btn btn-danger" style="margin-top: 1rem"><i class="fa fa-caret-left"></i>&nbsp;Terug</a>
@@ -50,7 +51,7 @@
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse1"><i class="fa fa-clock-o fa-fw">
+                            <a data-toggle="collapse" href="#collapse1"><i class="fa fa-calendar fa-fw">
                                 </i>
                                 Tijdlijn
                                 <i class="fa fa-caret-down"></i>
@@ -66,7 +67,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">De huisarts</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur</small>
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -111,7 +112,7 @@
                                             <div class="timeline-heading">
                                                 <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                 <p>
-                                                    <small class="text-muted"><i class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}</small>
+                                                    <small class="text-muted"><i class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}</small>
                                                 </p>
                                             </div>
                                             <div class="timeline-body">
@@ -123,7 +124,7 @@
                                                 <ul class="list-inline">
                                                     @if($appointment->consult != null)
                                                     <li>
-                                                        <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Informatie afspraak</button>
+                                                        <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Consult</button>
                                                     </li>
                                                     @endif
                                                     <li>
@@ -185,7 +186,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">De eerste hulp</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur</small>
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -229,7 +230,7 @@
                                                 <div class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
-                                                        <small class="text-muted"><i class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}</small>
+                                                        <small class="text-muted"><i class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}</small>
                                                     </p>
                                                 </div>
                                                 <div class="timeline-body">
@@ -241,7 +242,7 @@
                                                     <ul class="list-inline">
                                                         @if($appointment->consult != null)
                                                             <li>
-                                                                <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Informatie afspraak</button>
+                                                                <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Consult</button>
                                                             </li>
                                                         @endif
                                                         <li>
@@ -302,7 +303,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">Röntgenfoto</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur</small>
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -354,7 +355,7 @@
                                                 <div class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
-                                                        <small class="text-muted"><i class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}</small>
+                                                        <small class="text-muted"><i class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}</small>
                                                     </p>
                                                 </div>
                                                 <div class="timeline-body">
@@ -366,7 +367,7 @@
                                                     <ul class="list-inline">
                                                         @if($appointment->consult != null)
                                                             <li>
-                                                                <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Informatie afspraak</button>
+                                                                <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Consult</button>
                                                             </li>
                                                         @endif
                                                         <li>
@@ -427,7 +428,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">Gipsen</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur</small>
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                             </p>
                                         </div>
                                         <div class="timeline-body">
@@ -480,7 +481,7 @@
                                                 <div class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
-                                                        <small class="text-muted"><i class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}</small>
+                                                        <small class="text-muted"><i class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}</small>
                                                     </p>
                                                 </div>
                                                 <div class="timeline-body">
@@ -492,7 +493,7 @@
                                                     <ul class="list-inline">
                                                         @if($appointment->consult != null)
                                                             <li>
-                                                                <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Informatie afspraak</button>
+                                                                <button type="button" class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif" data-toggle="modal" data-target="#appointment{{$appointment->id}}">Consult</button>
                                                             </li>
                                                         @endif
                                                         <li>
@@ -557,6 +558,7 @@
 @endsection
 
 @section('footerscripts')
+
 
     <!-- jQuery -->
     <script src="{{asset('/vendor/jquery/jquery.min.js')}}"></script>

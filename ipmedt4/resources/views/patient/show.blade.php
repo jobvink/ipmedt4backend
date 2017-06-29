@@ -20,7 +20,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">De huisarts</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur
                                                 </small>
                                             </p>
                                         </div>
@@ -74,12 +74,12 @@
                                                 <i @if(!($appointment->date > \Carbon\Carbon::now())) class="fa fa-check"> @else
                                                         ><img width="25px" height="25px" src="/img/apotheek.svg"/>@endif
                                                 </i></div>
-                                            <div class="timeline-panel @if($appointment->date > \Carbon\Carbon::now()) afspraakbezig @else afspraakKlaar @endif ">
+                                            <div @if($appointment->date > \Carbon\Carbon::now() && $marker) id="marker" {{$marker = false}} @endif class="timeline-panel @if($appointment->date > \Carbon\Carbon::now()) afspraakbezig @else afspraakKlaar @endif ">
                                                 <div class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
                                                         <small class="text-muted"><i
-                                                                    class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}
+                                                                    class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}
                                                         </small>
                                                     </p>
                                                 </div>
@@ -98,7 +98,7 @@
                                                                         class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif"
                                                                         data-toggle="modal"
                                                                         data-target="#appointment{{$appointment->id}}">
-                                                                    Informatie afspraak
+                                                                    Consult
                                                                 </button>
                                                             </li>
                                                         @endif
@@ -145,7 +145,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">De eerste hulp</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur
                                                 </small>
                                             </p>
                                         </div>
@@ -201,11 +201,11 @@
                                                         ><img width="25px" height="25px" src="/img/apotheek.svg"/>@endif
                                                 </i></div>
                                             <div class="timeline-panel @if($appointment->date > \Carbon\Carbon::now()) afspraakbezig @else afspraakKlaar @endif ">
-                                                <div class="timeline-heading">
+                                                <div @if($appointment->date > \Carbon\Carbon::now() && $marker) id="marker" {{$marker = false}} @endif  class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
                                                         <small class="text-muted"><i
-                                                                    class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}
+                                                                    class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}
                                                         </small>
                                                     </p>
                                                 </div>
@@ -224,7 +224,7 @@
                                                                         class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif"
                                                                         data-toggle="modal"
                                                                         data-target="#appointment{{$appointment->id}}">
-                                                                    Informatie afspraak
+                                                                    Consult
                                                                 </button>
                                                             </li>
                                                         @endif
@@ -270,7 +270,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">Röntgenfoto</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur
                                                 </small>
                                             </p>
                                         </div>
@@ -342,11 +342,11 @@
                                                         ><img width="25px" height="25px" src="/img/apotheek.svg"/>@endif
                                                 </i></div>
                                             <div class="timeline-panel @if($appointment->date > \Carbon\Carbon::now()) afspraakbezig @else afspraakKlaar @endif ">
-                                                <div class="timeline-heading">
+                                                <div @if($appointment->date > \Carbon\Carbon::now() && $marker) id="marker" {{$marker = false}} @endif  class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
                                                         <small class="text-muted"><i
-                                                                    class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}
+                                                                    class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}
                                                         </small>
                                                     </p>
                                                 </div>
@@ -365,7 +365,7 @@
                                                                         class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif"
                                                                         data-toggle="modal"
                                                                         data-target="#appointment{{$appointment->id}}">
-                                                                    Informatie afspraak
+                                                                    Consult
                                                                 </button>
                                                             </li>
                                                         @endif
@@ -411,7 +411,7 @@
                                         <div class="timeline-heading">
                                             <h4 class="timeline-title">Gipsen</h4>
                                             <p>
-                                                <small class="text-muted"><i class="fa fa-clock-o"></i> ~ 1 tot 2 uur
+                                                <small class="text-muted">Duur: ongeveer 1 tot 2 uur
                                                 </small>
                                             </p>
                                         </div>
@@ -481,11 +481,11 @@
                                                         ><img width="25px" height="25px" src="/img/apotheek.svg"/>@endif
                                                 </i></div>
                                             <div class="timeline-panel @if($appointment->date > \Carbon\Carbon::now()) afspraakbezig @else afspraakKlaar @endif ">
-                                                <div class="timeline-heading">
+                                                <div @if($appointment->date > \Carbon\Carbon::now() && $marker) id="marker" {{$marker = false}} @endif  class="timeline-heading">
                                                     <h4 class="timeline-title">{{$appointment->title}} afspraak</h4>
                                                     <p>
                                                         <small class="text-muted"><i
-                                                                    class="fa fa-clock-o"></i>&nbsp;{{$appointment->date}}
+                                                                    class="fa fa-calendar"></i>&nbsp;{{$appointment->date}}
                                                         </small>
                                                     </p>
                                                 </div>
@@ -504,7 +504,7 @@
                                                                         class="btn @if($appointment->date < \Carbon\Carbon::now()) btn-success @else btn-primary @endif"
                                                                         data-toggle="modal"
                                                                         data-target="#appointment{{$appointment->id}}">
-                                                                    Informatie afspraak
+                                                                    Consult
                                                                 </button>
                                                             </li>
                                                         @endif
@@ -554,5 +554,31 @@
 @endsection
 
 @section('footerscripts')
+
+    <!-- jQuery -->
+    <script src="{{asset('/vendor/jquery/jquery.min.js')}}"></script>
+
+    <script>
+        $(function() { // when the DOM is ready...
+            var target = $('#marker');
+
+            if(target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 150
+                }, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    }
+                });
+            }
+        });
+    </script>
 
 @endsection
