@@ -3,40 +3,24 @@
 @section('content')
 
         <!--paginainfo-->
-        <div class="row info" id="site-info">
-            <div class="col-lg-2 col-lg-offset-2">
-                <div class="card">
-                    <img class="card-img-top info-img" src="../../../img/Red_cross.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title info-titel">De website</h4>
-                        <p class="card-text info-text">Op deze website is er meer informatie te vinden over het proces van het breken van je been. Ook kan je je afspraken en de extra infomatie die je krijgt bijhouden en makkelijk op een desboard zien.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <div class="card">
-                    <img class="card-img-top info-img" src="../../../img/patient.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title info-titel">Voor de patient</h4>
-                        <p class="card-text info-text">Je breekt je been en wat dan? op deze website kan je informatie vinden over het proces. Na het inloggen (dit kan met DigID) kan je al je afspraken en toegevoegte beschrijvingen volgen.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-lg-offset-1">
-                <div class="card">
-                    <img class="card-img-top info-img" src="../../../img/dokter.png" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title info-titel">Voor de doktor</h4>
-                        <p class="card-text info-text">De doter kan de afspraken van de patient bijhouden en makkelijk inzien. Het invoeren van de informatie voor de patient is zo makkelijk mogelijk gemaakt. Help de patient het proces soepeler doorlopen.</p>
-                    </div>
-                </div>
+        <div class="row info">
+            <div class="col-lg-4 col-lg-offset-4">
+                <img src="../../../img/life-technology-logo.png" class="img-responsive logo" alt="Life logo" height="auto" width="200">
             </div>
         </div>
+        <div class="row info">
+            <div class="col-md-4 col-xs-10 col-md-offset-4 col-xs-offset-1">
+                <p>Welkom op het homescherm van Life Technolegie, op deze website vind u meer informatie over het proces wat doorlopen word bij een gebroken been.
+                Op het hoofdscherm vind u de alle stappen die doorgelopen worden als u been is gebroken.
+                    U kunt inloggen door middel van DigID, dit zorgt er voor dat uw gegevens veilig zijn.
+                    Na het inloggen heeft u een persoonlijke tijdlein waar in u alle stappen kunt zien
+                met uw personlijke afspraken er bij.</p>
+            </div>
+        </div>
+
         <!--/pageinfo-->
         <!--timeline-->
-        <div  class="row">
+        <div  class="row" style="margin-bottom: 10vh">
             <div class="col-lg-8 col-lg-offset-2">
                 <ul class="timeline hometimeline">
 
@@ -244,6 +228,37 @@
             </div>
         </div>
         <!--/timeline-->
+        <div class="row info" id="site-info">
+            <div class="col-lg-2 col-lg-offset-2">
+                <div class="card">
+                    <img class="card-img-top info-img" src="../../../img/Red_cross.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title info-titel">De website</h4>
+                        <p class="card-text info-text">Op deze website is er meer informatie te vinden over het proces van het breken van je been. Ook kan je je afspraken en de extra infomatie die je krijgt bijhouden en makkelijk op een desboard zien.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-lg-offset-1">
+                <div class="card">
+                    <img class="card-img-top info-img" src="../../../img/patient.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title info-titel">Voor de patient</h4>
+                        <p class="card-text info-text">Je breekt je been en wat dan? op deze website kan je informatie vinden over het proces. Na het inloggen (dit kan met DigID) kan je al je afspraken en toegevoegte beschrijvingen volgen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-lg-offset-1">
+                <div class="card">
+                    <img class="card-img-top info-img" src="../../../img/dokter.png" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title info-titel">Voor de doktor</h4>
+                        <p class="card-text info-text">De doter kan de afspraken van de patient bijhouden en makkelijk inzien. Het invoeren van de informatie voor de patient is zo makkelijk mogelijk gemaakt. Help de patient het proces soepeler doorlopen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection
 
 @section('footerscripts')
