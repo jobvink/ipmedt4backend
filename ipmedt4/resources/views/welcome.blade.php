@@ -221,7 +221,7 @@
 
                     <!-- Einde tijdlijn -->
                     <li class="einde_tijdlijn">
-                        <div class="timeline-badge einde_timeline"><i><img class="Begin_icon" width="50px" height="50px" src="../../../img/broken-bone.png"/></i></div>
+                        <div class="timeline-badge einde_timeline"><i><img class="Begin_icon" width="50px" height="50px" src="../../../img/bone.png"/></i></div>
                     </li>
 
                 </ul>
