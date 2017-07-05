@@ -46,7 +46,7 @@ Route::group(['prefix' => '/patient/{patient}'], function(){
 });
 
 
-
+Route::post('/customlogin', 'Auth\LoginController@gebruiker');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
