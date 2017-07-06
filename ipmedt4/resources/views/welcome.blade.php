@@ -13,7 +13,7 @@
                 <p>Welkom op het homescherm van Life Technology!
                     Op deze website vindt u meer informatie over het proces wat u meemaakt bij een gebroken been.
                     Het hoofdscherm toont een tijdlijn met alle stappen die u doorloop in het proces.
-                    U kunt inloggen door middel van DigID, die ervoor zorgt dat uw gegevens veilig zijn en uw privacy wordt gewaarborgd.
+                    U kunt inloggen door middel van DigiD, die ervoor zorgt dat uw gegevens veilig zijn en uw privacy wordt gewaarborgd.
                     Na het inloggen ziet u uw persoonlijke tijdlijn waarin alle stappen plus uw persoonlijke afspraken.</p>
             </div>
         </div>
