@@ -132,3 +132,13 @@ body {
   display: block;
   margin: auto;
 }
+
+@media (max-width: 767px) {
+  .begin_timeline{
+    left: 35px !important;
+  }
+
+  .einde_timeline {
+    left: 35px !important;
+  }
+}
