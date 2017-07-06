@@ -9,6 +9,10 @@ body {
   right: 0;
 }
 
+.login{
+  padding-top: 10vh;
+}
+
 .navbar {
   display: flex;
   align-items: center;

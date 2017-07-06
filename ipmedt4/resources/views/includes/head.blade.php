@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Homescherm</title>
+    <title>Life Technology</title>
 
     <!--main css custom style-->
     <link href="{{asset('/css/main.css')}}" rel="stylesheet">
