@@ -10,7 +10,7 @@
         </div>
         <div class="row info">
             <div class="col-md-4 col-xs-10 col-md-offset-4 col-xs-offset-1">
-                <p>Welkom op het homescherm van LifeTechnologie!
+                <p>Welkom op het homescherm van Life Technology!
                     Op deze website vindt u meer informatie over het proces wat u meemaakt bij een gebroken been.
                     Het hoofdscherm toont een tijdlijn met alle stappen die u doorloop in het proces.
                     U kunt inloggen door middel van DigID, die ervoor zorgt dat uw gegevens veilig zijn en uw privacy wordt gewaarborgd.
