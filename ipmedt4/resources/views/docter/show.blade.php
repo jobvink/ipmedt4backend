@@ -35,7 +35,7 @@
                                             <td><a href="/docter/{{$docter->id}}/patients/{{$patient->id}}/" class="btn btn-success">Details</a></td>
                                         </tr>
                                     @endforeach
-                                    </tbody>
+                                </tbody>
                             </table>
                         </div>
                         <!-- /.panel-body -->
@@ -53,13 +53,6 @@
 @section('footerscripts')
     <!-- jQuery -->
     <script src="/vendor/jquery/jquery.min.js"></script>
-
-    <!-- Full Google Calendar - Calendar -->
-    <script type="text/javascript" src="/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="/js/fullcalendar.js"></script>
-    <script type="text/javascript" src="/js/calendar-custom.js"></script>
-    <script type="text/javascript" src="/js/gcal.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
 
     <!-- DataTable -->
     <script src="/js/jquery.js"></script>
