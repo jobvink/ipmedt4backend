@@ -13,6 +13,6 @@ class ConsultSeeder extends Seeder
     public function run()
     {
         //
-        factory(App\Consult::class, 1000)->create();
+        //factory(App\Consult::class, 1000)->create();
     }
 }
