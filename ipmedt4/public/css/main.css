@@ -1,5 +1,7 @@
 body {
   background-color: white !important;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .navbar-right {
