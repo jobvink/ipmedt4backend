@@ -36,7 +36,7 @@
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">De huisarts</h4>
                                 <p>
-                                    <small class="text-muted"><i class="fa fa-clock-o"></i>~ 1 tot 2 uur</small>
+                                    <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                 </p>
                             </div>
                             <div class="timeline-body">
@@ -80,7 +80,7 @@
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">De eerste hulp</h4>
                                 <p>
-                                    <small class="text-muted"><i class="fa fa-clock-o"></i>~ 1 tot 2 uur</small>
+                                    <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                 </p>
                             </div>
                             <div class="timeline-body">
@@ -122,7 +122,7 @@
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">Röntgenfoto</h4>
                                 <p>
-                                    <small class="text-muted"><i class="fa fa-clock-o"></i>~ 1 tot 2 uur</small>
+                                    <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                 </p>
                             </div>
                             <div class="timeline-body">
@@ -173,7 +173,7 @@
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">Gipsen</h4>
                                 <p>
-                                    <small class="text-muted"><i class="fa fa-clock-o"></i>~ 1 tot 2 uur</small>
+                                    <small class="text-muted">Duur: ongeveer 1 tot 2 uur</small>
                                 </p>
                             </div>
                             <div class="timeline-body">
