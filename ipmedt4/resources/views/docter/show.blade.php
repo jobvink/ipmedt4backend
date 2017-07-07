@@ -61,9 +61,9 @@
     <script> $('#mydata').dataTable(
         {"language":
             {
-                "sEmptyTable":   	"Er zijn geen articlen om weer te geven",
-                "sInfo":         	"Articlen _START_ tot _END_ van _TOTAL_.",
-                "sInfoEmpty":    	"0 van 0 tot 0 regels",
+                "sEmptyTable":   	"Er zijn geen patienten om weer te geven",
+                "sInfo":         	"patient _START_ tot _END_ van _TOTAL_.",
+                "sInfoEmpty":    	"0 van 0 tot 0 patienten",
                 "sInfoFiltered": 	"(gefilterd tot _MAX_ regels)",
                 "sInfoPostFix":  	"",
                 "sInfoThousands":  	".",
@@ -71,7 +71,7 @@
                 "sLoadingRecords": 	"Wordt geladen...",
                 "sProcessing":   	"Een moment geduld...",
                 "sSearch":       	"zoeken",
-                "sZeroRecords":  	"Geen articlen gevonden.",
+                "sZeroRecords":  	"Geen patienten gevonden.",
                 "oPaginate": {
                     "sFirst":    	"Eerste",
                     "sPrevious": 	"Vorige",
