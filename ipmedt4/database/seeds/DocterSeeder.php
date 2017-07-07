@@ -16,8 +16,8 @@ class DocterSeeder extends Seeder
             [
                 'id' => 1,
                 'name' => 'Dr. Robbert Winkel',
-                'email' => 'robertwinkel@test.nl',
-                'password' => bcrypt('ipmedt4'),
+                'email' => 'docter@test.nl',
+                'password' => bcrypt('demo'),
                 'function' => 'Dokter',
             ]
         ]);

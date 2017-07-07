@@ -19,8 +19,8 @@ class PatiendSeeder extends Seeder
                 'name' => 'Jeroen van der Meij',
                 'birthday' => Carbon::now()->addYear(-25),
                 'address' => 'Zernikedreef 11',
-                'email' => 'jeroen@test.nl',
-                'password' => bcrypt('ipmedt')
+                'email' => 'patient@test.nl',
+                'password' => bcrypt('demo')
             ]
         ]);
 

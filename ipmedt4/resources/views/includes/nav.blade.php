@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
                 <!-- Authentication Links -->
                 @if(Auth::guest())
-                    <li><a style="padding-right: 50px" href="{{ route('login') }}">Login</a></li>
+                    <li><a style="padding-right: 50px" href="{{ route('login') }}">Uitloggen</a></li>
                 @else
                     <li style="display: flex">
                         <a style="padding-right: 50px">
