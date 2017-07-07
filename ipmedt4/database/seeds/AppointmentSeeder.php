@@ -24,5 +24,7 @@ class AppointmentSeeder extends Seeder
             'docter_id' => 1,
         ]
         ]);
+        factory(App\Appointment::class, 1000)->create();
+
     }
 }
