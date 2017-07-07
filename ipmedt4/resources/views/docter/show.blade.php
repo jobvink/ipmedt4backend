@@ -58,7 +58,32 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.bootstrap.min.js"></script>
-    <script> $('#mydata').dataTable();</script>
+    <script> $('#mydata').dataTable(
+        {"language":
+            {
+                "sEmptyTable":   	"Er zijn geen articlen om weer te geven",
+                "sInfo":         	"Articlen _START_ tot _END_ van _TOTAL_.",
+                "sInfoEmpty":    	"0 van 0 tot 0 regels",
+                "sInfoFiltered": 	"(gefilterd tot _MAX_ regels)",
+                "sInfoPostFix":  	"",
+                "sInfoThousands":  	".",
+                "sLengthMenu":   	"_MENU_ regels",
+                "sLoadingRecords": 	"Wordt geladen...",
+                "sProcessing":   	"Een moment geduld...",
+                "sSearch":       	"zoeken",
+                "sZeroRecords":  	"Geen articlen gevonden.",
+                "oPaginate": {
+                    "sFirst":    	"Eerste",
+                    "sPrevious": 	"Vorige",
+                    "sNext":     	"Volgende",
+                    "sLast":     	"Laatste"
+                },
+                "oAria": {
+                    "sSortAscending":  ": aktivieren, um Spalte aufsteigend zu sortieren",
+                    "sSortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
+                }
+            }
+        });</script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
